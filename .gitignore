@@ -1,6 +1,5 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/django,node,react
-# Edit at https://www.toptal.com/developers/gitignore?templates=django,node,react
+# Created by https://www.toptal.com/developers/gitignore/api/pydev,django,node,react,firebase
+# Edit at https://www.toptal.com/developers/gitignore?templates=pydev,django,node,react,firebase
 
 ### Django ###
 *.log
@@ -150,6 +149,15 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
 ### Node ###
 # Logs
 logs
@@ -267,6 +275,9 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+### pydev ###
+.pydevproject
+
 ### react ###
 .DS_*
 **/*.backup.*
@@ -280,4 +291,4 @@ psd
 thumb
 sketch
 
-# End of https://www.toptal.com/developers/gitignore/api/django,node,react
+# End of https://www.toptal.com/developers/gitignore/api/pydev,django,node,react,firebase
