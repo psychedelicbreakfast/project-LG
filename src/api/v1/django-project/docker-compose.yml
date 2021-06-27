@@ -3,7 +3,9 @@ version: '3'
 services:
   db:
     container_name: django_db
-    image: postgres:13.3
+    build:
+      context: .
+      dockerfile: DockerfilePostgres
     volumes:
       - django_data_volume:/var/lib/postgresql/data
     environment:
@@ -15,6 +17,7 @@ services:
     build:
       context: .
       dockerfile: DockerfilePython
+    command: ./run-migrate-and-server.sh
     volumes:
       - ./code/django_rest_api:/code
     tty: true
@@ -27,6 +30,7 @@ services:
     build:
       context: .
       dockerfile: DockerfileNode
+    command: ./npm-install-and-start.sh
     volumes:
       - ./code/django_web_front:/code
     tty: true
