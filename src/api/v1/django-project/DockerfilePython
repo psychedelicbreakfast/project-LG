@@ -10,11 +10,8 @@ RUN mkdir /code
 # 作業ディレクトリを/code配下へ変更
 WORKDIR /code
 
-# requirements.txtを/code配下へコピー
-COPY ./python/requirements.txt /code/
+# ビルドコンテキストのファイルを/code配下へコピー
+ADD . /code/
 
 # requirements.txtへ記述したライブラリをインストール
-RUN pip install -r requirements.txt
-
-# ビルドコンテキストのファイルを/code配下へコピー
-COPY . /code/
+RUN pip install -r ./code/django_rest_api/requirements.txt

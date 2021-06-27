@@ -1,0 +1,8 @@
+# Node実行環境のDockerイメージを指定
+FROM node:14.17.1
+
+# コンテナにcodeディレクトリを作成
+RUN mkdir /code
+
+# 作業ディレクトリを/code配下へ変更
+WORKDIR /code
