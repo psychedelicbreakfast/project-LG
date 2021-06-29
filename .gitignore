@@ -292,3 +292,5 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/pydev,django,node,react,firebase
+
+# postgresql_volume/data/
